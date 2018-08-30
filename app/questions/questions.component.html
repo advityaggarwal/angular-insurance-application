@@ -1,0 +1,10 @@
+<form *ngIf="!booleanSample">
+    <h3>{{ques}}</h3><br>
+    <div class="form-group">
+    <div *ngFor='#option of options'>
+        <input type="radio" name='abcd' [value]="option" (click)="onChange(option)">{{option}}
+    </div>
+    </div>
+</form>
+
+<calculator *ngIf="booleanSample" [answer]="answer" [ans]='ans'></calculator>
